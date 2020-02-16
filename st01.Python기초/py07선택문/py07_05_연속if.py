@@ -7,3 +7,19 @@
 # 70점 이상이면 C,   
 # 60점 이상이면 D,    
 # 나머지는 F
+
+
+점수 = int(input("점수를 입력하시오 : "))
+
+if 점수 >=90 and 점수 <= 100 :
+    print("A")
+elif 점수 >=80 and 점수 <= 89:
+    print ("B")
+elif 점수 >=70 and 점수 <= 79:
+    print("C")
+elif 점수 >=60 and 점수 <= 69:
+    print("D")
+else:
+    print ("F")
+
+#and 생략가능.
