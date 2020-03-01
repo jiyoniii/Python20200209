@@ -7,3 +7,13 @@
 # 6. list에서 마지막 학생 삭제.
 # 7. list에서 0번 값을 출력하시오.
 # 8. 평균을 구하고 출력.
+리스트 = []
+count = 0
+학생수 = int(input("학생 수를 입력하시오 : "))
+
+while count < 학생수:
+    성적 = int(input("성적을 입력하세요 : "))
+    리스트.append(성적)
+    count = count + 1
+
+print(리스트)
