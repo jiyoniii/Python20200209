@@ -1,5 +1,5 @@
 
-# 작업 순서 
+# 작업 순서
 # 1. 모듈 또는 클래스 import
 # 2. 클래스명은 파스칼 표기법으로 정한다. 첫글자는 대문자로.
 #     생성자 선언 : 인스턴스가 생성될 때 실행
@@ -8,11 +8,31 @@
 #     접근자( getter ) 메서드 선언. 비공개 인스턴스 변수 읽기
 #     설정자( setter ) 메서드 선언. 비공개 인스턴스 변수 수정
 #     사용자 메서스 선언
-# 3. main() 메서드 만들기 
+# 3. main() 메서드 만들기
 #     인스턴스 생성
 # 4. 이 모듈이 단독으로 사용되면 main()를 호출하라.
 #    if __name__ == "__main__":
 #    main()
 
 
-# 코딩 하기 
+# 변수는  반지름 하나임.
+
+
+# 코딩 하기
+
+import math
+
+
+class Circle:
+    # 생성자 메서드 선언. 생성자 중복 불가. 1개만 존개 가능.
+    def __init__(self, radius=0):  # 메서드(동작,동사)
+        self.radius = radius  # 변수(=함수)(상태,명사) # 공개변수이기 때문에 앞의 __ 제거.
+
+   # 사용자 메서드
+    def calcArea(self):  # 둘레를 구하는 메소드.
+        result = math.pi * self. radius**2
+        return result
+
+    def calcCircum(self):
+        result = 2 * math.pi * self .radius
+        return result

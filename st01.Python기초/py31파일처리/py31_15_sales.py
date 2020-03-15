@@ -1,9 +1,42 @@
-# ÀÔ·Â ÆÄÀÏ ÀÌ¸§°ú Ãâ·Â ÆÄÀÏ ÀÌ¸§À» ¹Ş´Â´Ù.
+# ì…ë ¥ íŒŒì¼ ì´ë¦„ê³¼ ì¶œë ¥ íŒŒì¼ ì´ë¦„ì„ ë°›ëŠ”ë‹¤.
 
-# ÀÔ·Â°ú Ãâ·ÂÀ» À§ÇÑ ÆÄÀÏÀ» ¿¬´Ù.
+# ì…ë ¥ê³¼ ì¶œë ¥ì„ ìœ„í•œ íŒŒì¼ì„ ì—°ë‹¤.
 
-# ÇÕ°è¿Í È½¼ö¸¦ À§ÇÑ º¯¼ö¸¦ Á¤ÀÇÇÑ´Ù.
+# í•©ê³„ì™€ íšŸìˆ˜ë¥¼ ìœ„í•œ ë³€ìˆ˜ë¥¼ ì •ì˜í•œë‹¤.
 
-# ÀÔ·Â ÆÄÀÏ¿¡¼­ ÇÑ ÁÙÀ» ÀĞ¾î¼­ ÇÕ°è¸¦ °è»êÇÑ´Ù.
+# ì…ë ¥ íŒŒì¼ì—ì„œ í•œ ì¤„ì„ ì½ì–´ì„œ í•©ê³„ë¥¼ ê³„ì‚°í•œë‹¤.
 
-# ÃÑ¸ÅÃâ°ú ÀÏÆò±Õ ¸ÅÃâÀ» Ãâ·Â ÆÄÀÏ¿¡ ±â·ÏÇÑ´Ù.
+# ì´ë§¤ì¶œê³¼ ì¼í‰ê·  ë§¤ì¶œì„ ì¶œë ¥ íŒŒì¼ì— ê¸°ë¡í•œë‹¤.
+
+# file open
+salesFile = open(
+    "C:\\python.20200209\\Pythonê¸°ì´ˆ.20200209.ì‹¤ìŠµìš©\\st01.Pythonê¸°ì´ˆ\\py31íŒŒì¼ì²˜ë¦¬\\file\\sales.txt", "r")
+summary = open(
+    "C:\\python.20200209\\Pythonê¸°ì´ˆ.20200209.ì‹¤ìŠµìš©\\st01.Pythonê¸°ì´ˆ\\py31íŒŒì¼ì²˜ë¦¬\\file\\summary.txt", "w")
+
+# file process
+sum = 0
+count = 0
+avg = 0
+
+# read & print in for
+# read ì—ì„œ ë§ì…ˆ í‰ê·  êµ¬í•œ í›„ sumaryë¡œ ë„˜ê¸°ê¸°.
+# salesì— ìˆëŠ” íŒŒì¼ ë‚´ìš© í†µì§¸ë¡œ ë„˜ê¸°ê¸°.
+for line in salesFile.readlines():
+    line = int(line)
+    sum = sum + line
+    count = count + 1
+    avg = sum / count
+print("ë¼ì¸ì˜ ê°œìˆ˜: ", count)
+print("í•©ê³„ : ", sum)
+print("í‰ê·  : ", avg)
+
+sum = str(sum)
+avg = str(avg)
+summary.write("í•©ê³„ : " + sum)
+summary.write("\n")
+summary.write("í‰ê·  : " + avg)
+# summary.write(encoding="UTF-8")
+
+salesFile.close()
+summary.close()
